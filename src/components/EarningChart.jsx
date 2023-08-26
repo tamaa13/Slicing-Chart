@@ -34,7 +34,8 @@ const EarningChart = () => {
     useEffect(() => {
         const options = {
             chart: {
-                id: 'radial-chart'
+                id: 'radial-chart',
+                offsetX: 9
             },
             plotOptions: {
                 radialBar: {
@@ -75,7 +76,7 @@ const EarningChart = () => {
                         <p className="pt-5 pl-5 text-lg text-white">
                             Earnings
                         </p>
-                        <div className='flex px-2 pt-5 ml-16 t'>
+                        <div className='flex px-2 pt-5 ml-24'>
                             <select
                                 className="block text-[#2E4B85] bg-inherit"
                                 name="time" onChange={handleChange}>

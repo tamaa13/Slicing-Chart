@@ -127,24 +127,22 @@ const OrdersChart = () => {
 
     return (
         <div>
-            {
-                typeof window !== 'undefined' && (
-                    <div className="h-[180px] rounded pt-5 pl-5  bg-[#1C243F] dark:bg-[#1C243F]">
-                        <p className="text-lg text-white">
-                            Orders
-                        </p>
-                        <p className='text-3xl mt-2 text-[#FF814A]'>189K</p>
-                        <Chart
-                            options={chartOptions}
-                            series={chartOptions.series}
-                            type="bar"
-                            stacked={true}
-                            height='130px'
-                            width='80%'
-                        />
-                    </div>
-                )
-            }
+            {typeof window !== 'undefined' && (
+                <div className="h-[180px] rounded pt-5 pl-5  bg-[#1C243F] dark:bg-[#1C243F]">
+                    <p className="text-lg text-white">
+                        Orders
+                    </p>
+                    <p className='text-3xl mt-2 text-[#FF814A]'>189K</p>
+                    <Chart
+                        options={chartOptions}
+                        series={chartOptions.series}
+                        type="bar"
+                        stacked={true}
+                        height='130px'
+                        width='80%'
+                    />
+                </div>
+            )}
         </div>
     )
 }
